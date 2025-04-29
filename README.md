@@ -8,7 +8,7 @@ Table of Contents
 
 ## Getting Started (ง •̀ω•́)ง✧
 
-First, run the development server:
+First, run the django server:
 
 ```bash
 npm run dev
@@ -19,6 +19,15 @@ pnpm dev
 # or
 bun dev
 ```
+(Django server defaults to localhost:8000)
+
+Next run the react server via:
+
+```bash
+npm start
+``` 
+
+in a new terminal.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

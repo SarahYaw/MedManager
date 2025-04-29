@@ -1,5 +1,5 @@
 """
-WSGI config for medmanager project.
+WSGI config for medManager project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medmanager.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medManager.settings')
 
 application = get_wsgi_application()

@@ -1,10 +1,8 @@
-import { medicationObject } from "../types/medication";
-import TableRow from "./TableRow";
-import axios from "axios";
+import { medicationObject } from "../../../types/medication";
+import TableRow from "./TableRow.tsx";
 
 
-export default async function Table(props: {rows:medicationObject[]}) {
-
+export default function Table(props: {rows:medicationObject[]}) {
     return (
         <div>
             <p>Add Medication Button</p>

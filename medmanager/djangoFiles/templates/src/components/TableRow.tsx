@@ -1,4 +1,4 @@
-import { medicationObject } from "../types/medication";
+import { medicationObject } from "../../../types/medication";
 
 export default function TableRow(props: { medication: medicationObject}) {
     return (
@@ -10,7 +10,7 @@ export default function TableRow(props: { medication: medicationObject}) {
             <td>{props.medication.afternoon}</td>
             <td>{props.medication.evening}</td>
             <td>{props.medication.provider}</td>
-            <td>{props.medication.refilled.toLocaleDateString()}</td>
+            <td>{props.medication.refilled.toLocaleString()}</td>
             <td>Edit Button    Delete Button</td>
         </tr>
     )
