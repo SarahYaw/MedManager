@@ -44,15 +44,15 @@ function Create() {
         </label>
         <label>
           Morning Dose:
-          <input type="number" name="morning" />
+          <input type="decimal" name="morning" />
         </label>
         <label>
           Afternoon Dose:
-          <input type="number" name="afternoon" />
+          <input type="decimal" name="afternoon" />
         </label>
         <label>
           Evening Dose:
-          <input type="number" name="evening" />
+          <input type="decimal" name="evening" />
         </label>
         <label>
           Provider:

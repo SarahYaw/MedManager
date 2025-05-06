@@ -141,19 +141,23 @@ export class ControllerController {
       },
     })
     medication: Medication,
-  ): Promise<void> {
+  ): Promise<Medication> {
     await this.medicationRepository.updateById(id, medication);
+    return this.medicationRepository.findById(id);
   }
 
-  @put('/api/edit/{id}')
+  @put('/api/refill/{id}')
   @response(204, {
     description: 'Medication PUT success',
   })
-  async replaceById(
+  async refillById(
     @param.path.string('id') id: string,
     @requestBody() medication: Medication,
-  ): Promise<void> {
+  ): Promise<Medication> {
+    const currentDate = new Date();
+    medication.refilled = currentDate.toISOString();
     await this.medicationRepository.replaceById(id, medication);
+    return this.medicationRepository.findById(id);
   }
 
   @del('/api/delete/{id}')
