@@ -8,18 +8,12 @@ Table of Contents
 
 ## Getting Started (ง •̀ω•́)ง✧
 
-First, run the django server:
+First, run the loopback server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm start
 ```
-(Django server defaults to localhost:8000)
+(loopback server defaults to localhost:3000 so in this code I changed it to 4000)
 
 Next run the react server via:
 
@@ -48,4 +42,4 @@ To learn more about What's used in this project:
 - [React.js Docs](https://react.dev/) - documentation for React.js to make things look pretty.
 - [TypeScript Docs](https://www.typescriptlang.org/) - learn about ehy there's colons and data types all over this code.
 - [MarkDown Info for the ReadMe's!](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) - learn about the specific syntax GitHub uses for the ReadMe's
-- [Django Docs](https://docs.djangoproject.com) - Docs for Django python back end.
+- [loopback Docs](https://docs.loopbackproject.com) - Docs for loopback python back end.

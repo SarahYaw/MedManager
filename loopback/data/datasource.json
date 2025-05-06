@@ -1,0 +1,16 @@
+{
+  "ids": {
+      "Medication": 8
+  },
+  "models": {
+      "Medication": {
+          "1": "{\"name\":\"Anti-Inflammatory\", \"dosage\":\"500 mg\", \"morning\":\"1\", \"afternoon\":\"\", \"evening\":\"0.5\", \"provider\":\"Rheumatologist\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":90, \"description\":\"large orange tablet\", \"id\":\"1\"}",
+          "2": "{\"name\":\"Anti-Depressant\", \"dosage\":\"60 Mg\", \"morning\":\"1\", \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Primary\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":90, \"description\":\"orange and green capsule\", \"id\":\"2\"}",
+          "3": "{\"name\":\"Anti-Depressant (supplemental)\", \"dosage\":\"30 Mg\", \"morning\":\"1\", \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Primary\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":90, \"description\":\"white and green capsule\", \"id\":\"3\"}",
+          "4": "{\"name\":\"Diuretic\", \"dosage\":\"50 Mg\", \"morning\":\"1\",  \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Endochrinologist\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":90, \"description\":\"small white tablet\", \"id\":\"4\"}",
+          "5": "{\"name\":\"Hormone Regulator\", \"dosage\":\"N/A\", \"morning\":\"1\",  \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Endochrinologist\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":90, \"description\":\"full dose is small blue tablet; partial dose is small white tablet; placebo dose is brown tablet\", \"id\":\"5\"}",
+          "6": "{\"name\":\"Rescue Inhailer\", \"dosage\":\"2.5 Mg/3Ml Soln\", \"morning\":\"\", \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Primary\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":180, \"description\":\"take as needed\", \"id\":\"6\"}",
+          "7": "{\"name\":\"Anti-Fungal Cream\", \"dosage\":\"N/A\", \"morning\":\"\", \"afternoon\":\"\", \"evening\":\"\", \"provider\":\"Dermatologist\", \"refilled\":\"2025-05-05T00:00:00.000Z\", \"quantity\":\"\",\"description\":\"use as needed\",\"id\":\"7\"}"
+      }
+  }
+}
