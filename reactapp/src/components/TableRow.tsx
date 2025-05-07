@@ -6,10 +6,10 @@ function onEditClick(id: number) {
     window.location.href = "/update/" + id;
 }
 function onDeleteClick(id: number) {
-    console.log("Delete button clicked");
-}
+    window.location.href = "/delete/" + id;
+}   
+
 function onRefillClick(id: number) {
-    console.log("Refill button clicked");
     axios.patch('http://localhost:4000/api/update/' + id, { refilled: new Date().toISOString() })
         .then((response) => {
             if (response.status === 200) {

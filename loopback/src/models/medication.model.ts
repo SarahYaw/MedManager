@@ -48,15 +48,15 @@ export class Medication extends Entity {
   provider?: string;
 
   @property({
+    type: 'string',
+  })
+  quantity?: string;
+
+  @property({
     type: 'date',
     required: true,
   })
   refilled: string;
-
-  @property({
-    type: 'string',
-  })
-  quantity?: string;
 
 
   constructor(data?: Partial<Medication>) {

@@ -59,6 +59,10 @@ function Create() {
           <input type="text" name="provider" />
         </label>
         <label>
+          Quantity:
+          <input type="text" name="quantity" />
+        </label>
+        <label>
           Last Refilled:
           <input type="date" name="refilled" />
         </label>

@@ -38,7 +38,7 @@ const rows:medicationObject[] = await axios.get('http://localhost:4000/api/read'
           <h1 className="text-3xl font-bold">You have no meds saved</h1>
           <p className="text-lg">Click the button below to add a medication</p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={createMed}>Add Medication</button>
-
+          <p><small>If you are seeing this message in error, please contact your local nerd</small></p>
         </div>
       )
     } else {

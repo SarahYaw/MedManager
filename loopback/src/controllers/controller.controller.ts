@@ -164,7 +164,8 @@ export class ControllerController {
   @response(204, {
     description: 'Medication DELETE success',
   })
-  async deleteById(@param.path.string('id') id: string,): Promise<void> {
+  async deleteById(@param.path.string('id') id: string,): Promise<object> {
     await this.medicationRepository.deleteById(id);
+    return {'status': 'success', 'message': 'Medication deleted successfully'};
   }
 }

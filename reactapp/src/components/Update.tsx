@@ -46,6 +46,7 @@ function Update() {
 						form.afternoon.value = data.afternoon;
 						form.evening.value = data.evening;
 						form.provider.value = data.provider;
+						form.quantity.value = data.quantity;
 						form.refilled.value = new Date(data.refilled).toISOString().split('T')[0]; // Format date for input
 					}
 				} else {
@@ -89,6 +90,10 @@ function Update() {
 				<label>
 					Provider:
 					<input type="text" name="provider" />
+				</label>
+				<label>
+					Quantity:
+					<input type="text" name="quantity" />
 				</label>
 				<label>
 					Last Refilled:
