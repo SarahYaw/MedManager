@@ -1,4 +1,5 @@
 import { medicationObject } from "../types/medication.ts";
+import axios from 'axios';
 import * as React from 'react';
 
 function onEditClick(id: number) {
@@ -9,6 +10,18 @@ function onDeleteClick(id: number) {
 }
 function onRefillClick(id: number) {
     console.log("Refill button clicked");
+    axios.patch('http://localhost:4000/api/update/' + id, { refilled: new Date().toISOString() })
+        .then((response) => {
+            if (response.status === 200) {
+                window.location.href = '/';
+            } else {
+                console.error('Error submitting data:', response.statusText);
+            }
+        })
+        .catch((error) => {
+            console.error('There has been a problem with your fetch operation:', error);
+        }
+    );  
 }
 
 export default function TableRow(props: { medication: medicationObject}) {
