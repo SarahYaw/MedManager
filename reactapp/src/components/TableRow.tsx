@@ -29,13 +29,15 @@ export default function TableRow(props: { medication: medicationObject}) {
     function getRefillStatus() {
         const today = new Date();
         const lastRefill = new Date(props.medication.refilled);
+        const morning:number = Number(props.medication.morning) || 0;
+        const afternoon:number = Number(props.medication.afternoon) || 0;
+        const evening:number = Number(props.medication.evening) || 0;
+
         // get days since last refill
         const daysSinceRefill = Math.floor((today.getTime() - lastRefill.getTime()) / (1000 * 3600 * 24));
-        const dosesUsedPerDay = props.medication.morning + props.medication.afternoon + props.medication.evening;
-        const totalDosesUsed = daysSinceRefill * dosesUsedPerDay;
-        // quantity left in the bottle
-        const quantityLeft = props.medication.quantity - totalDosesUsed;
-        const daysUntilRefill = Math.floor(quantityLeft / dosesUsedPerDay);
+        const dosesUsedPerDay = morning + afternoon + evening;
+        const daysPerRefill = props.medication.quantity / dosesUsedPerDay;
+        const daysUntilRefill = daysPerRefill - daysSinceRefill;
         
         if (daysUntilRefill === 0) {
             return "today";

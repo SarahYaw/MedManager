@@ -43,8 +43,8 @@ const rows:medicationObject[] = await axios.get('http://localhost:4000/api/read'
       )
     } else {
       return (
-        <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-          <h1 className="text-3xl font-bold">Your Medications</h1>
+        <div>
+          <h1>Your Medications</h1>
           <Table rows={rows} />
         </div>
       )

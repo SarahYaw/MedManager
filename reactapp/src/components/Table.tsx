@@ -5,14 +5,13 @@ import TableRow from "./TableRow.tsx";
 
 export default function Table(props: {rows:medicationObject[]}) {
     
-    function createMed() {
-        // route user to the create page
+    function addMedButton() {
         window.location.href = '/create/';
     }
 
     return (
         <div>
-            <button onClick={createMed}>+ Add Medication</button>
+            <button onClick={addMedButton}>+ Add Medication</button>
             {/* Add ability to sort by "provider", "will need refill soonest", "alphabetical" */}
             <table>
                 <thead>
@@ -30,7 +29,7 @@ export default function Table(props: {rows:medicationObject[]}) {
                 </thead>
                 <tbody>
                     {props.rows.map(function(row: medicationObject, index: number) {
-                        // Use React.Fragment to avoid passing key down to TableRow
+                        // Use React.Fragment to avoid passing key down to TableRow but you can still use key
                         return (
                             <React.Fragment key={index}>
                                 <TableRow medication={row} />
