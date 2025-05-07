@@ -26,19 +26,32 @@ button:hover {
 table {
   border-collapse: collapse;
   width: 100%;
-}
-th, td {
-  border: 1px solid #24242455;
-  padding: 5px;
-}
-th {
-  background-color: #0f4a49;
-  color: white;
+
+  
+  th, td {
+    border: 1px solid #24242455;
+    padding: 5px;
+  }
+  th {
+    background-color: #0f4a49;
+    color: white;
+  }
+  .action-col {
+    display: grid;
+  }
+
+  .overdue {
+    background-color: #e77070;
+  }
+  .today {
+    background-color: #619f5b;
+  }
+  .week {
+    background-color: #f2d16b;
+  }
+
 }
 
-.action-col {
-  display: grid;
-}
 
 form {
   display: grid;
