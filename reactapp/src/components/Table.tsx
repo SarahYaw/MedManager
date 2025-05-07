@@ -12,7 +12,7 @@ export default function Table(props: {rows:medicationObject[]}) {
 
     return (
         <div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={createMed}>Add Medication</button>
+            <button onClick={createMed}>+ Add Medication</button>
             {/* Add ability to sort by "provider", "will need refill soonest", "alphabetical" */}
             <table>
                 <thead>

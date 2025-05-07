@@ -46,7 +46,7 @@ function Create() {
 
     return (
         <span>
-            <h3> Are you sure you wish to remove {medObject.name} from your medication list?</h3>
+            <h3> Are you sure you wish to remove <span className='med-name'>{medObject.name}</span> from your medication list?</h3>
             <p>Dosage: {medObject.dosage}</p>
             <p>Description: {medObject.description}</p>
             <p>Morning: {medObject.morning ? 'Yes' : 'No'}</p>
@@ -60,11 +60,13 @@ function Create() {
     }
 
   return (
-    <div className="create">
-      <form onSubmit={handleSubmit} method="POST" action="/create/">
+    <div>
+      <form onSubmit={handleSubmit} method="POST" action="/create/" className="delete-form">
         {getQuestionData()}
-        <button type="submit">YES</button>
-        <button type="button" onClick={() => window.location.href = '/'}>NO</button>
+        <span className="buttons">
+            <button type="submit">YES</button>
+            <button type="button" onClick={() => window.location.href = '/'}>NO</button>
+        </span>
       </form>
     </div>
   );

@@ -16,7 +16,7 @@ function Update() {
 		const data = Object.fromEntries(formData.entries());
 		data.refilled = new Date(data.refilled as string).toISOString()
 
-		axios.patch('http://localhost:4000/api/update/'+getIdFromUrl(), data)
+		axios.patch('http://localhost:4000/api/update/' + getIdFromUrl(), data)
 			.then((response) => {
 				if (response.status === 200) {
 					window.location.href = '/';
@@ -60,48 +60,32 @@ function Update() {
 
 	getCurrentInfo();
 	return (
-		<div className="update">
+		<div>
 			<h3>Edit Your Medication data in the form below:</h3>
 			<form onSubmit={handleSubmit} method="PATCH">
-				<label>
-					Name:
-					<input type="text" name="name" />
-				</label>
-				<label>
-					Dosage:
-					<input type="text" name="dosage" />
-				</label>
-				<label>
-					Description:
-					<input type="textarea" name="description" />
-				</label>
-				<label>
-					Morning Dose:
-					<input type="decimal" name="morning" />
-				</label>
-				<label>
-					Afternoon Dose:
-					<input type="decimal" name="afternoon" />
-				</label>
-				<label>
-					Evening Dose:
-					<input type="decimal" name="evening" />
-				</label>
-				<label>
-					Provider:
-					<input type="text" name="provider" />
-				</label>
-				<label>
-					Quantity:
-					<input type="text" name="quantity" />
-				</label>
-				<label>
-					Last Refilled:
-					<input type="date" name="refilled" />
-				</label>
-				<button type="submit">Submit</button>
-				<button type="reset">Reset Form</button>
-				<button type="button" onClick={() => window.location.href = '/'}>Back</button>
+				<label for='name'>Name:</label>
+				<input type="text" name="name" />
+				<label for='dosage'>Dosage:</label>
+				<input type="text" name="dosage" />
+				<label for='description'>Description:</label>
+				<input type="textarea" name="description" />
+				<label for='morning'>Morning Dose:</label>
+				<input type="decimal" name="morning" />
+				<label for='afternoon'>Afternoon Dose:</label>
+				<input type="decimal" name="afternoon" />
+				<label for='evening'>Evening Dose:</label>
+				<input type="decimal" name="evening" />
+				<label for='provider'>Provider:</label>
+				<input type="text" name="provider" />
+				<label for='quantity'>Quantity:</label>
+				<input type="text" name="quantity" />
+				<label for='refilled'>Last Refilled:</label>
+				<input type="date" name="refilled" />
+				<span className="buttons">
+					<button type="submit">Save Changes</button>
+					<button type="reset">Clear Form</button>
+					<button type="button" onClick={() => window.location.href = '/'}>Cancel</button>
+				</span>
 			</form>
 		</div>
 	);

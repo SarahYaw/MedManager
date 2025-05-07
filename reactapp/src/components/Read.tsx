@@ -34,10 +34,10 @@ const rows:medicationObject[] = await axios.get('http://localhost:4000/api/read'
   function checkRows(rows: medicationObject[]) {
     if ( rows === undefined || rows.length === 0) {
       return (
-        <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-          <h1 className="text-3xl font-bold">You have no meds saved</h1>
-          <p className="text-lg">Click the button below to add a medication</p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={createMed}>Add Medication</button>
+        <div className="empty-meds">
+          <h1>You have no meds saved</h1>
+          <p>Click the button below to add a medication</p>
+          <button onClick={createMed}>Add Medication</button>
           <p><small>If you are seeing this message in error, please contact your local nerd</small></p>
         </div>
       )
@@ -54,11 +54,11 @@ const rows:medicationObject[] = await axios.get('http://localhost:4000/api/read'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div>
+      <main>
         {checkRows(rows)}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="footer">
         <p>Made By <a href="https://github.com/SarahYaw">Sarah Yaw</a> 2025</p>
       </footer>
     </div>
