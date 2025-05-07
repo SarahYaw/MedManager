@@ -10,8 +10,6 @@ function Create() {
         axios.delete('http://localhost:4000/api/delete/' + medicationId)
         .then((response) => {
             if (response.status === 200) {
-                console.log('Data deleted successfully:', response.data);
-                // Optionally, redirect or update the UI here
                 window.location.href = '/';
             } else {
                 console.error('Error deleting data:', response.statusText);
@@ -45,6 +43,7 @@ function Create() {
     if (!medObject) {
         return <p>Loading...</p>; // Show a loading message while fetching data
     }
+
     return (
         <span>
             <h3> Are you sure you wish to remove {medObject.name} from your medication list?</h3>

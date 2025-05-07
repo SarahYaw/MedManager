@@ -29,7 +29,7 @@ const rows:medicationObject[] = await axios.get('http://localhost:4000/api/read'
     window.location.href = '/create/';
   }
 
-  //  if rows is empty, return a "you have no meds saved"
+  // if rows is empty, return a "you have no meds saved"
   // else return the table with rows
   function checkRows(rows: medicationObject[]) {
     if ( rows === undefined || rows.length === 0) {

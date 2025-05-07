@@ -13,8 +13,6 @@ function Create() {
     axios.post('http://localhost:4000/api/create', data)
     .then((response) => {
       if (response.status === 200) {
-        console.log('Data submitted successfully:', response.data);
-        // Optionally, redirect or update the UI here
         window.location.href = '/';
       } else {
         console.error('Error submitting data:', response.statusText);
