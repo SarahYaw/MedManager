@@ -50,6 +50,12 @@ export default function TableRow(props: { medication: medicationObject}) {
         }
     }
 
+    function displayDateNicely() {
+        const date = new Date(props.medication.refilled);
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString(undefined, options);
+    }
+
     return (
         <tr className={getRefillStatus()}>
             <td>{props.medication.name}</td>
@@ -59,11 +65,13 @@ export default function TableRow(props: { medication: medicationObject}) {
             <td>{props.medication.afternoon}</td>
             <td>{props.medication.evening}</td>
             <td>{props.medication.provider}</td>
-            <td>{props.medication.refilled.toLocaleString()}</td>
-            <td className="action-col">
-                <button type="button" onClick={() => onRefillClick(props.medication.id)}>Refilled Today!</button>
-                <button type="button" onClick={() => onEditClick(props.medication.id)}>Edit</button>
-                <button type="button" onClick={() => onDeleteClick(props.medication.id)}>Delete</button>
+            <td>{displayDateNicely()}</td>
+            <td>
+                <span  className="action-col">
+                    <button type="button" onClick={() => onRefillClick(props.medication.id)}>Refilled Today!</button>
+                    <button type="button" onClick={() => onEditClick(props.medication.id)}>Edit</button>
+                    <button type="button" onClick={() => onDeleteClick(props.medication.id)}>Delete</button>
+                </span>
             </td>
         </tr>
     )

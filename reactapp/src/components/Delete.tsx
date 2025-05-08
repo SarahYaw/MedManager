@@ -44,6 +44,12 @@ function Create() {
         return <p>Loading...</p>; // Show a loading message while fetching data
     }
 
+    function displayDateNicely() {
+        const date = new Date(medObject.refilled);
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString(undefined, options);
+    }
+
     return (
         <span>
             <h3> Are you sure you wish to remove <span className='med-name'>{medObject.name}</span> from your medication list?</h3>
@@ -53,7 +59,7 @@ function Create() {
             <p>Afternoon: {medObject.afternoon ? 'Yes' : 'No'}</p>
             <p>Evening: {medObject.evening ? 'Yes' : 'No'}</p>
             <p>Provider: {medObject.provider}</p>
-            <p>Refilled: {new Date(medObject.refilled).toLocaleString()}</p>
+            <p>Refilled: {displayDateNicely()}</p>
             <p>Quantity: {medObject.quantity}</p>
         </span>
     );

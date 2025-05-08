@@ -4,6 +4,7 @@
   margin: auto;
   color: #242424;
   font-family: 'Arial', sans-serif;
+  font-size: medium;
 }
 
 button {
@@ -15,7 +16,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: small;
   margin: 2px 2px;
   cursor: pointer;
 }
@@ -23,21 +24,56 @@ button:hover {
   background-color: #122734;
 }
 
+.table-header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  
+  & .sort-by {
+    font-size: 20px;
+    font-weight:bold;
+
+    & select {
+      padding: 10px;
+      margin-left: 10px;
+      border: 1px solid #242424;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
 table {
   border-collapse: collapse;
-  width: 100%;
+  table-layout: fixed;
 
-  
   th, td {
     border: 1px solid #24242455;
-    padding: 5px;
+
+    &.wide {
+      width: 10%;
+    }
+    &.narrow {
+      width: 5%;
+    }
+    &.description {
+      width: 15%;
+    }
   }
+
   th {
     background-color: #0f4a49;
     color: white;
   }
+
   .action-col {
     display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
   }
 
   .overdue {
@@ -52,9 +88,31 @@ table {
   .old {
     background-color: #e7a175;
   }
-
 }
 
+.key {
+  align-self: center;
+
+  span {
+  padding: 2px 4px;
+  border: none;
+  border-radius: 5px;
+  margin: 1px 2px;
+
+  &.overdue {
+    background-color: #e77070;
+  }
+  &.today {
+    background-color: #619f5b;
+  }
+  &.week {
+    background-color: #f2d16b;
+  }
+  &.old {
+    background-color: #e7a175;
+  }
+}
+}
 
 form {
   display: grid;
@@ -86,28 +144,6 @@ form {
 
   & .med-name {
     color:#187150
-  }
-}
-.table-header {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  margin: auto;
-  padding: 10px;
-  text-align: left;
-  width: 100%;
-  
-  & .sort-by {
-    font-size: 20px;
-    font-weight:bold;
-
-    & select {
-      padding: 10px;
-      margin-left: 10px;
-      border: 1px solid #242424;
-      border-radius: 5px;
-      font-size: 16px;
-    }
   }
 }
 
