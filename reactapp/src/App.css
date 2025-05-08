@@ -49,6 +49,9 @@ table {
   .week {
     background-color: #f2d16b;
   }
+  .old {
+    background-color: #e7a175;
+  }
 
 }
 
@@ -83,6 +86,28 @@ form {
 
   & .med-name {
     color:#187150
+  }
+}
+.table-header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  
+  & .sort-by {
+    font-size: 20px;
+    font-weight:bold;
+
+    & select {
+      padding: 10px;
+      margin-left: 10px;
+      border: 1px solid #242424;
+      border-radius: 5px;
+      font-size: 16px;
+    }
   }
 }
 

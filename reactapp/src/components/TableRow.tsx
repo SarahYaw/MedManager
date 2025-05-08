@@ -41,14 +41,13 @@ export default function TableRow(props: { medication: medicationObject}) {
         
         if (daysUntilRefill === 0) {
             return "today";
-        }
-        if (daysUntilRefill < 0) {
+        } else if (daysUntilRefill < 0) {
             return "overdue";
-        }
-        if (daysUntilRefill < 7) {
+        } else if (daysUntilRefill < 7) {
             return "week";
+        } else if (daysSinceRefill > 365) {
+            return "old";
         }
-        
     }
 
     return (

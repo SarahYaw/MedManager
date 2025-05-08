@@ -74,43 +74,6 @@ export class ControllerController {
     return this.medicationRepository.find();
   }
 
-  @get('/api/find')
-  @response(200, {
-    description: 'Array of Medication model instances',
-    content: {
-      'application/json': {
-        schema: {
-          type: 'array',
-          items: getModelSchemaRef(Medication, {includeRelations: true}),
-        },
-      },
-    },
-  })
-  async find(
-    @param.filter(Medication) filter?: Filter<Medication>,
-  ): Promise<Medication[]> {
-    return this.medicationRepository.find(filter);
-  }
-
-  @patch('/api/updateall')
-  @response(200, {
-    description: 'Medication PATCH success count',
-    content: {'application/json': {schema: CountSchema}},
-  })
-  async updateAll(
-    @requestBody({
-      content: {
-        'application/json': {
-          schema: getModelSchemaRef(Medication, {partial: true}),
-        },
-      },
-    })
-    medication: Medication,
-    @param.where(Medication) where?: Where<Medication>,
-  ): Promise<Count> {
-    return this.medicationRepository.updateAll(medication, where);
-  }
-
   @get('/api/{id}')
   @response(200, {
     description: 'Medication model instance',
