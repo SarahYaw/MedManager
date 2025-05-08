@@ -5,6 +5,7 @@ Table of Contents
  - [Getting Started](#getting-started-ง-̀ώง)
  - [Learn More](#learn-more-ヾ-ゞ)
 
+![image](https://github.com/user-attachments/assets/1d527037-9f7e-41fb-a531-b65308d353ce)
 
 ## Getting Started (ง •̀ω•́)ง✧
 
